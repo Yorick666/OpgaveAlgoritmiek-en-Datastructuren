@@ -93,3 +93,8 @@ class VulClass
         }
     }
 ```
+
+
+## Opgave 3
+
+![Opgave 3 Instance Diagram](http://i.imgur.com/qYMHLmR.jpg)
