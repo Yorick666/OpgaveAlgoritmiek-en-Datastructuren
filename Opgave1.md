@@ -98,3 +98,91 @@ class VulClass
 ## Opgave 3
 
 ![Opgave 3 Instance Diagram](http://i.imgur.com/qYMHLmR.jpg)
+
+## Opgave 4
+### Verwijder eerste instantie
+```C#
+public void Verwijder(string naam)
+        {
+            int index = ZoekNaam(naam);
+            if(index != -1)
+            {
+                Verwijder(index);
+            }
+        }
+
+
+        private void Verwijder(int index)
+        {
+            if (index <= AANTAL)
+            {
+                for (int i = index; i < AANTAL; i++)
+                {
+                    if (i == AANTAL)
+                    {
+                        Gegevens[i] = null;
+                    }
+                    else
+                    {
+                        Gegevens[i] = Gegevens[i + 1];
+                    }
+                }
+            }
+        }
+```
+
+### Verwijder laatste instantie
+```C#
+ public void Verwijder(string naam)
+        {
+            for (int i = AANTAL; i > 0; i--)
+            {
+                if (Gegevens[i].HeeftNaam(naam))
+                {
+                    Verwijder(i); //Zie methode verwijder eerste instantie
+                    return;
+                }
+            }
+        }
+```
+
+### Verwijder alle instantie
+```C#
+ public void Verwijder(string naam)
+        {
+            for (int i = AANTAL; i > 0; i--)
+            {
+                if (Gegevens[i].HeeftNaam(naam))
+                {
+                    Verwijder(i);
+                }
+            }
+        }
+```
+
+### Verwijder de eerste instantie op basis van woonplaats en adres
+```C#
+public void Verwijder(string woonplaats, string adres)
+        {
+            int index = ZoekWoonplaatsEnAdres(woonplaats, adres);
+            if(index != -1)
+            {
+                Verwijder(index);
+            }
+        }
+```
+
+### Verwijder alle instanties op basis van woonplaats en adres
+```C#
+ public void Verwijder(string woonplaats, string adres)
+        {
+            for (int i = AANTAL; i > 0; i--)
+            {
+                if (Gegevens[i].HeeftAdres(adres) && Gegevens[i].HeeftWoonplaats(woonplaats))
+                {
+                    Verwijder(i);
+                }
+            }
+        }
+```
+
