@@ -186,3 +186,36 @@ public void Verwijder(string woonplaats, string adres)
         }
 ```
 
+## Week 1.2
+### Hint
+```C#
+public int CompareTo(object obj)
+        {
+            if (obj == null)
+            {
+                return 1;
+            }
+            else 
+            {
+                throw new InvalidArgumentException("Niet een NAW vriend!");
+            }
+
+            NAW otherNAW = obj as NAW;
+            if(otherNAW.Naam != Naam)
+            {
+                return Naam.CompareTo(otherNAW.Naam);
+            }
+
+            if(otherNAW.Adres != Adres)
+            {
+                return Adres.CompareTo(otherNAW.Adres);
+            }
+
+            if(otherNAW.Woonplaats != Woonplaats)
+            {
+                return Woonplaats.CompareTo(otherNAW.Woonplaats);
+            }
+          
+            return 0;
+        }
+```
