@@ -1,5 +1,5 @@
 # Week 1
-## Opgave 1
+## Week 1.1.1
 ```C#
 class NAW
     {
@@ -24,7 +24,7 @@ class NAW
     }
 ```
 
-## Opgave 2
+##  Week 1.1.2
 ```C#
 class VulClass
     {
@@ -95,11 +95,11 @@ class VulClass
 ```
 
 
-## Opgave 3
+##  Week 1.1.3
 
-![Opgave 3 Instance Diagram](http://i.imgur.com/qYMHLmR.jpg)
+![ Week 1.1.3 Instance Diagram](http://i.imgur.com/qYMHLmR.jpg)
 
-## Opgave 4
+##  Week 1.1.4
 ### Verwijder eerste instantie
 ```C#
 public void Verwijder(string naam)
