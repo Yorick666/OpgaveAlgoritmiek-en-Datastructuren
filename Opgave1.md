@@ -1,3 +1,30 @@
+# Week 1
+## Opgave 1
+```C#
+class NAW
+    {
+        public string Naam {get; set;}
+        public string Adres { get; set; }
+        public string Woonplaats { get; set; }
+
+        public bool HeeftNaam(string naam)
+        {
+            return Naam == naam;
+        }
+
+        public bool HeeftAdres(string adres)
+        {
+            return Adres == adres;
+        }
+
+        public bool HeeftWoonplaats(string woonplaats)
+        {
+            return Woonplaats == woonplaats;
+        }
+    }
+```
+
+## Opgave 2
 ```C#
 class VulClass
     {
