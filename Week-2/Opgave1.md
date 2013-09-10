@@ -58,3 +58,22 @@ class Program
         }
     }
 ```
+
+# Week 2.1.2
+```C#
+private static void NAWBubbelSort(NAW[] input)
+        {
+            for (int outer = input.Length - 1; outer > 0; outer--)
+            {
+                for (int inner = 0; inner < outer; inner++)
+                {
+                    if (input[inner].CompareTo(input[inner + 1]) != -1)
+                    {
+                        swap(input, inner, inner + 1);
+                    }
+                }
+            }
+        }
+```
+Ja de plaatsen zijn na het uitvoeren binnen de naam gesorteerd.
+Het algoritme is dus stabiel.
