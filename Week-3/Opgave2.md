@@ -1,5 +1,8 @@
 # Week 3
 ## Week 3.2.1
+Implementeer een efficiënt bubble sort algoritme in een tweerichtingslijst.
+* Zie bijlage
+
 Geef in de big–O Notatie aan van welke orde dit algoritme is. Verklaar 
 je antwoord.
 * Ook dit algoritme is O(N^2). Beide loops groeien qwa tijd liniear met de input grootte.
@@ -38,7 +41,8 @@ public void undo()
         }
 ```
 
-* De methode _GetLastLink() wordt ook aangepast.
+* De methode _GetLastLink()_ wordt ook aangepast.
+
 ```C#
 private void AddLastLink(Link<T> e)
         {
@@ -52,9 +56,33 @@ private void AddLastLink(Link<T> e)
                 Current = Last;
             }
             Size++;
-        }```
+        }
+```
 
 ### Bijlage
+__BubbleSort()__
+```C#
+ public static void BubbleSort(LinkedList<int> list)
+        {
+            Link<int> current = list.First;
+            bool foundChange = true;
+            while (foundChange)
+            {
+                foundChange = false;
+                while (current.Next != null)
+                {
+                    if (current.Item > current.Next.Item)
+                    {
+                        current.SwapRight();
+                        foundChange = true;
+                    }
+                    current = current.Next;
+                }
+                current = list.First;
+            }
+        }
+```
+
 __LinkedList.cs__
 ```C#
 public class LinkedList<T>
