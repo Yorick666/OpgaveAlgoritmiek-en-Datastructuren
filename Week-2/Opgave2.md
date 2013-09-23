@@ -1,5 +1,5 @@
 # Week 2
-## Week 2.1.1
+## Week 2.2.1
 
 Schrijf een selection sort algoritme dat eerst de grootste waarde op de 
 goede positie zet.
@@ -53,21 +53,8 @@ class Program
 Het algortitme is O(N^2) aangezien elke for loop met een grotere input ook groter wordt.
 De loops zijn genest dus de vergroting wordt dan exponentieel.
 
-# Week 2.1.2
+# Week 2.2.2
 ```C#
-private static void NAWBubbelSort(NAW[] input)
-        {
-            for (int outer = input.Length - 1; outer > 0; outer--)
-            {
-                for (int inner = 0; inner < outer; inner++)
-                {
-                    if (input[inner].CompareTo(input[inner + 1]) != -1)
-                    {
-                        swap(input, inner, inner + 1);
-                    }
-                }
-            }
-        }
+TODO
 ```
-Ja de plaatsen zijn na het uitvoeren binnen de naam gesorteerd.
-Het algoritme is dus stabiel.
+
