@@ -1,5 +1,8 @@
 # Week 1
 ## Week 2.1.1
+
+Schrijf een selection sort algoritme dat eerst de grootste waarde op de 
+goede positie zet.
 ```C#
 class Program
     {
@@ -58,6 +61,9 @@ class Program
         }
     }
 ```
+
+Het algortitme is O(N^2) aangezien elke for loop met een grotere input ook groter wordt.
+De loops zijn genest dus de vergroting wordt dan exponentieel.
 
 # Week 2.1.2
 ```C#
