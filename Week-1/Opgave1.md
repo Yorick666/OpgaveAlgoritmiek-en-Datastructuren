@@ -195,10 +195,6 @@ public int CompareTo(object obj)
             {
                 return 1;
             }
-            else 
-            {
-                throw new InvalidArgumentException("Niet een NAW vriend!");
-            }
 
             NAW otherNAW = obj as NAW;
             if(otherNAW.Naam != Naam)
