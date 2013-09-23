@@ -13,8 +13,49 @@ deze overeen met de orde van het algoritme? Verklaar je antwoord.
 Vergelijk je antwoord met vraag 4 van vorige week.
 * Er is geen vraag 4 in week 2.
 
+
+## Week 3.2.2
+Maak een gekoppelde lijst die handelingen als integers opslaat. De 
+gekoppelde lijst dient de methodes _undo_, _redo_ en _insert_ te bezitten.
+
+* De klasse krijgt een extra Property genaamt current. Deze is standaard gelijk aan Last.
+* De klasse LinkedList zoals in de bijlage dient de volgende methodes te krijgen.
+
+```C#
+public void undo()
+        {
+            Current = Current.Previous;
+        }
+
+        public void redo()
+        {
+            Current = Current.Next;
+        }
+
+        public void insert(T item)
+        {
+            Current.Item = item;
+        }
+```
+
+* De methode _GetLastLink() wordt ook aangepast.
+```C#
+private void AddLastLink(Link<T> e)
+        {
+            if (Size == 0)
+                First = Last = Current = e;
+            else
+            {
+                e.Previous = Last;
+                Last.Next = e;
+                Last = e;
+                Current = Last;
+            }
+            Size++;
+        }```
+
 ### Bijlage
-_LinkedList.cs_
+__LinkedList.cs__
 ```C#
 public class LinkedList<T>
     {
@@ -105,10 +146,10 @@ public class LinkedList<T>
 
         public void AddLast(T o)
         {
-            AddLastEntry(new Link<T>(o));
+            AddLastLink(new Link<T>(o));
         }
 
-        private void AddLastEntry(Link<T> e)
+        private void AddLastLink(Link<T> e)
         {
             if (Size == 0)
                 First = Last = e;
@@ -171,7 +212,7 @@ public class LinkedList<T>
     }
 ```
 
-_Link.cs_
+__Link.cs__
 ```C#
 public class Link<E>
     {
