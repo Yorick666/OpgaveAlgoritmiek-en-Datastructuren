@@ -142,3 +142,64 @@ De gegevens veranderen niet, alleen de methodes om te sorteren vernaderen.
 
     LB: 7
     UB: 6
+
+
+## Week 1.2.3.c
+
+Als de array gesorteerd is van laag naar hoog, dan zal de gezochte waarden ergens tussen lower en upper bounds moeten liggen, zolang de lower bound kleiner is dan de upper bound.
+
+## Week 1.2.3.d
+
+```C#
+public int findAdd(int addKey)
+        {
+
+            int lowerBound = 0;
+            int upperBound = nElems-1;
+            int curIn;
+
+            while (true)
+            {
+                curIn = (lowerBound + upperBound) / 2;
+                if (a[curIn] == addKey)
+                {
+                    Console.WriteLine("Added " + addKey + " to index: " + AddKey(addKey, curIn + 1));
+                    for (int i = 0; i < nElems; i++)
+                    {
+                        Console.WriteLine(a[i]);
+                    }
+                    return (curIn + 1); // found it
+                }
+                else if (lowerBound > upperBound)
+                {
+                    Console.WriteLine("Added " + addKey +" to index: " + AddKey(addKey, lowerBound));
+                    for (int i = 0; i < nElems; i++)
+                    {
+                        Console.WriteLine(a[i]);
+                    }
+                    return nElems; // can’t find it
+                }
+                else // divide range
+                {
+                    if (a[curIn] < addKey)
+                        lowerBound = curIn + 1; // it’s in upper half
+                    else
+                        upperBound = curIn - 1; // it’s in lower half
+                } // end else divide range
+            } // end while
+        } // end find()
+
+        private int AddKey(int key, int index)
+        {
+            for (int i = nElems; i >= index; i--)
+            {
+                if(a.Length!=i+1)
+                a[i + 1] = a[i];
+                if (i == index)
+                    a[i] = key;
+
+            }
+            nElems++;
+            return index;
+        }
+```
