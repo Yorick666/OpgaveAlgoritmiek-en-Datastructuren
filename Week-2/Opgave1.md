@@ -1,7 +1,7 @@
 # Week 2
 ## Week 2.1.1
 
-Schrijf een selection sort algoritme dat eerst de grootste waarde op de 
+Schrijf een bubble sort algoritme dat eerst de kleinste waarde op de 
 goede positie zet.
 ```C#
 class Program
