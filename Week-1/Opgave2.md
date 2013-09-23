@@ -125,24 +125,33 @@ De gegevens veranderen niet, alleen de methodes om te sorteren vernaderen.
         
 ## Week 1.2.3.b
 
+    0
     LB: 0
     UB: -1
 
+    2
     LB: 1
     UB: 0
 
+    4
+    LB: 2
+    UB: 1
+    
+    5
     LB: 2
     UB: 1
 
+    23
     LB: 6
     UB: 5
 
+    26
     LB: 6
     UB: 5
 
+    30
     LB: 7
     UB: 6
-
 
 ## Week 1.2.3.c
 
@@ -163,20 +172,10 @@ public int findAdd(int addKey)
                 curIn = (lowerBound + upperBound) / 2;
                 if (a[curIn] == addKey)
                 {
-                    Console.WriteLine("Added " + addKey + " to index: " + AddKey(addKey, curIn + 1));
-                    for (int i = 0; i < nElems; i++)
-                    {
-                        Console.WriteLine(a[i]);
-                    }
                     return (curIn + 1); // found it
                 }
                 else if (lowerBound > upperBound)
                 {
-                    Console.WriteLine("Added " + addKey +" to index: " + AddKey(addKey, lowerBound));
-                    for (int i = 0; i < nElems; i++)
-                    {
-                        Console.WriteLine(a[i]);
-                    }
                     return nElems; // can’t find it
                 }
                 else // divide range
