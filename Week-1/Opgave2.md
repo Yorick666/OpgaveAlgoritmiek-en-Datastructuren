@@ -91,4 +91,54 @@ In het instance diagram is geen verschil met die uit opgave 1.1.3.
 ![ Week 1.2.2 Instance Diagram](http://i.imgur.com/qYMHLmR.jpg)
 De gegevens veranderen niet, alleen de methodes om te sorteren vernaderen.
 
+## Week 1.2.3.a
 
+```C#
+ public int find(int searchKey)
+        {
+
+            int lowerBound = 0;
+            int upperBound = nElems - 1;
+            int curIn;
+            while (true)
+            {
+                curIn = (lowerBound + upperBound) / 2;
+                if (a[curIn] == searchKey)
+                    return curIn; // found it
+                else if (lowerBound > upperBound)
+                {
+                    Console.WriteLine("LowerBound= " + lowerBound);
+                    Console.WriteLine("UpperBound= " + upperBound);
+                    Console.WriteLine("------------");
+                    return nElems; // can’t find it
+                }
+                else // divide range
+                {
+                    if (a[curIn] < searchKey)
+                        lowerBound = curIn + 1; // it’s in upper half
+                    else
+                        upperBound = curIn - 1; // it’s in lower half
+                } // end else divide range
+            } // end while
+        } // end find()
+```
+        
+## Week 1.2.3.b
+
+    LB: 0
+    UB: -1
+
+    LB: 1
+    UB: 0
+
+    LB: 2
+    UB: 1
+
+    LB: 6
+    UB: 5
+
+    LB: 6
+    UB: 5
+
+    LB: 7
+    UB: 6
