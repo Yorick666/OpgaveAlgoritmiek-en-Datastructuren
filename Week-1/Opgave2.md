@@ -29,7 +29,25 @@
 ```
 
 ```C#
- Array.Sort(test.Gegevens);
+ public int zoek(NAW waarde)
+        {
+            int midden, laag = 0, hoog = AANTAL - 1;
+
+            while (laag <= hoog)
+            {
+                midden = (laag + hoog) / 2;
+
+                if (Gegevens[midden].CompareTo(waarde) == 0)
+                    return midden;
+
+                if (Gegevens[midden].CompareTo(waarde) < 0)
+                    laag = midden + 1;
+                else
+                    hoog = midden - 1;
+            }
+
+            return AANTAL;
+        }
 ```
 
 ## Week 1.2.2
