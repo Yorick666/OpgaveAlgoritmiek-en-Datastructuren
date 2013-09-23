@@ -28,8 +28,14 @@
         }
 ```
 
+Schrijf een methode om:
+* een NAW – instantie te zoeken. Schrijf een binair zoekalgoritme.
+* een NAW – instantie toe te voegen.
+* een NAW – instantie (met in te voeren eigenschappen) te verwijderen
+* een NAW – instantie te wijzigen
+
 ```C#
- public int zoek(NAW waarde)
+public int zoek(NAW waarde)
         {
             int midden, laag = 0, hoog = AANTAL - 1;
 
@@ -38,15 +44,45 @@
                 midden = (laag + hoog) / 2;
 
                 if (Gegevens[midden].CompareTo(waarde) == 0)
-                    return midden;
+                {
 
-                if (Gegevens[midden].CompareTo(waarde) < 0)
+                    return midden;
+                }
+                else if (Gegevens[midden].CompareTo(waarde) < 0)
+                {
                     laag = midden + 1;
+                }
                 else
+                {
                     hoog = midden - 1;
+                }
             }
 
             return AANTAL;
+        }
+
+
+        public void toevoegen(NAW nieuweNAW)
+        {
+            int index = Gegevens.Length + 1;
+            Gegevens[index] = nieuweNAW;
+        }
+
+        public void Verwijder(string naam, string woonplaats, string adres)
+        {
+            for (int i = AANTAL; i > 0; i--)
+            {
+                if (Gegevens[i].HeeftAdres(adres) && Gegevens[i].HeeftWoonplaats(woonplaats) && Gegevens[i].HeeftNaam(naam))
+                {
+                    Verwijder(i);
+                }
+            }
+        }
+
+        public void wijzig(NAW oud, NAW nieuw)
+        {
+            int index = zoek(oud);
+            Gegevens[index] = nieuw;
         }
 ```
 
