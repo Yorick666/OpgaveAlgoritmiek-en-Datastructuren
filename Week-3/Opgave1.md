@@ -150,3 +150,42 @@ _Length1_ & _Length2_
             return Size;
         }
 ```
+
+## Week 3.1.4
+```C#
+public static void BubbleSort(LinkedList<NAW> list)
+        {
+            Link<NAW> current = list.First;
+            bool foundChange = true;
+            while (foundChange)
+            {
+                foundChange = false;
+                while (current.Next != null)
+                {
+                    if (String.Compare(current.Naw.naam, current.Next.Naw.naam)>0)
+                    {
+                        NAW n = current.Naw;
+                        current.Naw = current.Next.Naw;
+                        current.Next.Naw = n;
+                        foundChange = true;
+                    }
+                    else if (String.Compare(current.Naw.naam, current.Next.Naw.naam) == 0 && String.Compare(current.Naw.adres, current.Next.Naw.adres) > 0)
+                    {
+                        NAW n = current.Naw;
+                        current.Naw = current.Next.Naw;
+                        current.Next.Naw = n;
+                        foundChange = true;
+                    }
+                    else if (String.Compare(current.Naw.naam, current.Next.Naw.naam) == 0 && String.Compare(current.Naw.adres, current.Next.Naw.adres) == 0 && String.Compare(current.Naw.woonplaats, current.Next.Naw.woonplaats) > 0)
+                    {
+                        NAW n = current.Naw;
+                        current.Naw = current.Next.Naw;
+                        current.Next.Naw = n;
+                        foundChange = true;
+                    }
+                    current = current.Next;
+                }
+                current = list.First;
+            }
+        }
+```
