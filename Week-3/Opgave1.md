@@ -1,5 +1,14 @@
 # Week 3
 ## Week 3.1.1
+Maak een gekoppelde lijst waarin je NAW –gegevens opslaat. 
+* Maak de Link–klasse en LinkedList–klasse. 
+* Maak een methode om NAW –gegevens toe te voegen aan het begin van de 
+gekoppelde lijst. 
+* Maak een methode om een NAW–instantie te zoeken. 
+* Maak een methode om alle NAW–gegevens te tonen. 
+* Maak een methode om bepaalde NAW – gegevens te verwijderen. 
+
+
 ```C#
 ﻿using System;
 using System.Collections.Generic;
@@ -98,6 +107,10 @@ namespace AlgoritmiekDatastructuren
 ```
 
 ## Week 3.1.2
+Je kunt een gekoppelde lijst waar NAW – gegevens in zijn opgeslagen maken met 
+verschillende Link – klassen. In deze opgave ga je voor twee verschillende 
+benaderingen een objectdiagram maken. Van elke benadering worden de 
+attributen van de Link –klasse beschreven:
 ![Instance diagram](http://i.imgur.com/bQyrSh5.jpg)
 
 ![Instance diagram](http://i.imgur.com/ZNKpYVC.jpg)
