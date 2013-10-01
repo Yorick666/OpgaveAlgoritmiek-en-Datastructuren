@@ -5,6 +5,7 @@ van een queue. Hou je aan het OO paradigma: maak bijvoorbeeld een
 aparte Queue–klasse. Breid de Queue–klasse uit met een methode 
 getCount() die aangeeft hoeveel elementen zich in de Queue 
 bevinden.
+
 _CashRegister.cs_
 ```C#
 class CashRegister
@@ -31,7 +32,7 @@ class CashRegister
     }
 ```
 
-Queue.cs_
+_Queue.cs_
 ```C#
 class Queue<T>
     {
@@ -154,4 +155,5 @@ Indien registerSpeed kleiner of gelijk is aan MaxNewCostumersPerTick dan zal de 
 
 ## Week 4.2.1
 Lever de broncode in.
-_De broncode die we gebruikt hebben voor Week 4 is de zelde stack als we gemaakt hadden voor Week 3._
+_De broncode die we gebruikt hebben voor Week 4 is de zelde stack als we gemaakt hadden voor 4.1._
+TODO
