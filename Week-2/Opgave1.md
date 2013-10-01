@@ -81,5 +81,8 @@ private static void NAWBubbelSort(NAW[] input)
             }
         }
 ```
-Ja de plaatsen zijn na het uitvoeren binnen de naam gesorteerd.
+Is dit algoritme stabiel? Geef aan hoe je stabiliteit getest hebt! 
+_Ja de plaatsen zijn na het uitvoeren binnen de naam gesorteerd.
 Het algoritme is dus stabiel.
+
+We hebben verschillende data getest, zelfde naam, ander adres en een hoop andere waardes._
