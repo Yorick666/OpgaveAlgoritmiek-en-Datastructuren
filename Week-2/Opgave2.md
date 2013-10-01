@@ -49,12 +49,17 @@ class Program
         }
     }
 ```
-
-Het algortitme is O(N^2) aangezien elke for loop met een grotere input ook groter wordt.
-De loops zijn genest dus de vergroting wordt dan exponentieel.
+Beredeneer dat het algoritme van O(N2) is.
+_Het algortitme is O(N^2) aangezien elke for loop met een grotere input ook groter wordt.
+De loops zijn genest dus de vergroting wordt dan exponentieel._
 
 # Week 2.2.2
+Schrijf een insertion sort algoritme waarvan eerst de sub–array vanaf 
+een bepaalde waarde tot aan rij.length-1 inwendig gesorteerd is.
+
 ```C#
 TODO
 ```
+
+Beredeneer dat het algoritme van O(N2) is.
 
